@@ -76,13 +76,13 @@ export default function Footer() {
                 </span>
               </div>
               <span className="font-serif text-xl font-bold text-white">
-                Batty Capital
+                BATIVILLE Trading Co
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/50">
-              Batty Capital is an African investment firm focused on scaling
-              high-potential enterprises through strategic capital deployment,
-              export partnerships, and technology advisory.
+              BATIVILLE Trading Co is an African investment firm focused on
+              scaling high-potential enterprises through strategic capital
+              deployment, export partnerships, and technology advisory.
             </p>
             <div className="mt-6 text-sm text-white/40">
               <p>14 Victoria Island Business District</p>
@@ -135,7 +135,8 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row lg:px-12">
           <p className="text-xs text-white/30">
-            © {new Date().getFullYear()} Batty Capital. All rights reserved.
+            © {new Date().getFullYear()} BATIVILLE Trading Co. All rights
+            reserved.
           </p>
           <div className="flex items-center gap-6">
             <a

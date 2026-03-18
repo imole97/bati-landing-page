@@ -33,9 +33,9 @@ export default function WhyNigeria() {
               opportunity to deploy capital at scale is unparalleled.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
-              At Batty Capital, we understand the nuances of operating in this
-              environment. Our deep local networks, regulatory expertise, and
-              sector-specific knowledge allow us to identify and nurture
+              At BATIVILLE Trading Co, we understand the nuances of operating in
+              this environment. Our deep local networks, regulatory expertise,
+              and sector-specific knowledge allow us to identify and nurture
               high-potential enterprises that global investors often overlook —
               delivering outsized returns while catalyzing real economic growth.
             </p>

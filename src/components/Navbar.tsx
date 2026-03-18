@@ -62,7 +62,7 @@ export default function Navbar() {
               scrolled ? "text-foreground" : "text-white"
             }`}
           >
-            Batty Capital
+            BATIVILLE Trading Co
           </span>
         </a>
 

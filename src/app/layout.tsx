@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Batty Capital | Fueling the Future of African Enterprise",
+  title: "BATIVILLE Tradind Co | Fueling the Future of African Enterprise",
   description:
-    "Batty Capital is a premier African investment firm providing growth financing, export partnerships, and technology advisory to high-potential enterprises across Nigeria and the continent.",
+    "BATIVILLE Tradind Co is a premier African investment firm providing growth financing, export partnerships, and technology advisory to high-potential enterprises across Nigeria and the continent.",
 };
 
 export default function RootLayout({
