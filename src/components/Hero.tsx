@@ -15,12 +15,12 @@ export default function Hero() {
               "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/60 to-black/80" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -28,7 +28,7 @@ export default function Hero() {
           <span className="mb-6 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 backdrop-blur-sm">
             African Capital & Investment
           </span>
-        </motion.div>
+        </motion.div> */}
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -78,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-24 bg-gradient-to-t from-[#f8f7f4] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 z-10 h-24 bg-linear-to-t from-background to-transparent" />
     </section>
   );
 }

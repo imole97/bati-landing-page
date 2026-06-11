@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { ArrowUp } from "lucide-react";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
 const footerLinks = {
   strategies: [
@@ -70,14 +72,17 @@ export default function Footer() {
           {/* Logo & Address */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-orange">
+              {/* <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-orange">
                 <span className="font-serif text-lg font-bold text-white">
                   B
                 </span>
               </div>
               <span className="font-serif text-xl font-bold text-white">
                 BATIVILLE Trading Co
-              </span>
+              </span> */}
+              <div className="relative  aspect-600/400 w-[200px] h-[50px]">
+                <Image fill className="object-cover align-text-top" src={logo} alt="Logo" />
+              </div>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/50">
               BATIVILLE Trading Co is an African investment firm focused on

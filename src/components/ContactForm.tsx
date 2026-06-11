@@ -12,6 +12,8 @@ export default function ContactForm() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -19,11 +21,32 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormData({ name: "", email: "", company: "", message: "" });
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", company: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch {
+      setError("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -56,9 +79,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-foreground">Email</p>
-                <p className="mt-1 text-sm text-muted">
-                  invest@battycapital.com
-                </p>
+                <p className="mt-1 text-sm text-muted">invest@bativille.com</p>
               </div>
               <div>
                 <p className="text-sm font-semibold text-foreground">Phone</p>
@@ -145,20 +166,27 @@ export default function ContactForm() {
                 />
               </div>
 
-              <button
-                type="submit"
-                disabled={submitted}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-foreground py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-foreground/90 hover:shadow-lg disabled:opacity-70"
-              >
-                {submitted ? (
-                  "Message Sent ✓"
-                ) : (
-                  <>
-                    Send Message
-                    <Send size={14} />
-                  </>
+              <div className="space-y-4">
+                {error && (
+                  <p className="text-sm font-medium text-red-500">{error}</p>
                 )}
-              </button>
+                <button
+                  type="submit"
+                  disabled={submitted || isSubmitting}
+                  className="flex w-full items-center justify-center gap-2 rounded-full bg-foreground py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-foreground/90 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : submitted ? (
+                    "Message Sent ✓"
+                  ) : (
+                    <>
+                      Send Message
+                      <Send size={14} />
+                    </>
+                  )}
+                </button>
+              </div>
             </form>
           </ScrollReveal>
         </div>

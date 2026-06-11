@@ -97,7 +97,7 @@ export default function IndustryFocus() {
                   style={{ backgroundImage: `url('${industry.image}')` }}
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-all duration-500 group-hover:from-black/90" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent transition-all duration-500 group-hover:from-black/90" />
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <p className="text-xs font-medium uppercase tracking-[0.15em] text-accent-orange">
@@ -121,8 +121,8 @@ export default function IndustryFocus() {
             </p>
             <div className="relative overflow-hidden">
               {/* Fade edges */}
-              <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
-              <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+              <div className="pointer-events-none absolute top-0 bottom-0 left-0 z-10 w-24 bg-linear-to-r from-background to-transparent" />
+              <div className="pointer-events-none absolute top-0 right-0 bottom-0 z-10 w-24 bg-linear-to-l from-background to-transparent" />
               {/* Marquee track */}
               <div className="animate-marquee flex w-max items-center gap-16">
                 {[...partnerLogos, ...partnerLogos].map((logo, i) => (
