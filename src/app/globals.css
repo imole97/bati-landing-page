@@ -1,17 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #f8f7f4;
-  --color-foreground: #1a1a1a;
+  --color-background: #f7f5ef;
+  --color-foreground: #11192b;
+  --color-navy: #15233f;
+  --color-navy-deep: #0c1322;
+  --color-olive: #97a35a;
+  --color-olive-deep: #6f7a3f;
+  --color-gold: #c9a24b;
+  --color-gold-soft: #e3c987;
+  --color-cream-muted: #cdd2c4;
   --color-accent-orange: #d4772c;
   --color-accent-green: #2d6a4f;
   --color-accent-blue: #1b4965;
   --color-card: #ffffff;
   --color-muted: #6b7280;
   --color-border: #e5e5e5;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: "Fraunces", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -61,4 +75,50 @@ html {
 input:focus,
 textarea:focus {
   outline: none;
+}
+
+/* Grain / noise texture overlay (brand-owned, no asset) */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Slow vertical float for layered stat cards */
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.animate-float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+.animate-float-soft-delay {
+  animation: float-soft 8s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Ambient drift for background glows / motif */
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, -2%, 0) scale(1.05);
+  }
+}
+.animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-soft,
+  .animate-float-soft-delay,
+  .animate-drift,
+  .animate-marquee {
+    animation: none;
+  }
 }

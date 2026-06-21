@@ -1,7 +1,7 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
-import { TrendingUp, Globe, Users, DollarSign } from "lucide-react";
+import { ArrowRight, TrendingUp, Globe, Users, DollarSign } from "lucide-react";
 
 const stats = [
   { value: "$120M+", label: "Capital Deployed", icon: DollarSign },
@@ -12,27 +12,39 @@ const stats = [
 
 export default function WhyNigeria() {
   return (
-    <section id="about" className="py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+    <section
+      id="about"
+      className="relative overflow-hidden bg-background py-24 lg:py-32"
+    >
+      {/* Ambient brand texture */}
+      <div className="pointer-events-none absolute -top-24 right-0 h-[30rem] w-[30rem] rounded-full bg-olive/10 blur-[130px]" />
+      <div className="pointer-events-none absolute bottom-0 -left-32 h-[26rem] w-[26rem] rounded-full bg-gold/10 blur-[120px]" />
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         {/* Split Section */}
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
           {/* Left: Narrative */}
           <ScrollReveal direction="left">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-orange">
-              Why Africa
-            </span>
-            <h2 className="mt-4 font-serif text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              The Continent&apos;s Most Dynamic
-              <span className="text-accent-green"> Investment Frontier</span>
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-10 bg-olive" />
+              <span className="font-mono text-[0.7rem] font-medium uppercase tracking-[0.32em] text-olive-deep">
+                Why Africa
+              </span>
+            </div>
+            <h2 className="font-serif text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]">
+              The Continent&apos;s Most Dynamic{" "}
+              <span className="bg-linear-to-r from-olive-deep to-olive bg-clip-text italic text-transparent">
+                Investment Frontier
+              </span>
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
+            <p className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               Nigeria and the broader African continent represent one of the
               last great untapped investment frontiers. With a youthful,
               fast-growing population exceeding 1.4 billion, rapidly expanding
               digital infrastructure, and a burgeoning middle class, the
               opportunity to deploy capital at scale is unparalleled.
             </p>
-            <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               At BATIVILLE Trading Co, we understand the nuances of operating in
               this environment. Our deep local networks, regulatory expertise,
               and sector-specific knowledge allow us to identify and nurture
@@ -41,69 +53,79 @@ export default function WhyNigeria() {
             </p>
             <a
               href="#approach"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent-blue transition-colors hover:text-accent-orange"
+              className="group mt-9 inline-flex items-center gap-2 text-sm font-semibold text-navy transition-colors hover:text-olive-deep"
             >
-              Explore Our Approach
-              <span className="transition-transform group-hover:translate-x-1">
-                →
+              <span className="relative">
+                Explore Our Approach
+                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" />
               </span>
+              <ArrowRight
+                size={16}
+                className="text-gold transition-transform duration-300 group-hover:translate-x-1"
+              />
             </a>
           </ScrollReveal>
 
-          {/* Right: Geometric Visual */}
-          <ScrollReveal direction="right" delay={0.2}>
-            <div className="relative flex items-center justify-center">
-              {/* Decorative geometric circles */}
-              <div className="relative h-80 w-80 sm:h-96 sm:w-96">
-                {/* Orange circle fragment */}
-                <div className="absolute top-0 left-0 h-64 w-64 overflow-hidden rounded-full border-4 border-accent-orange/20 sm:h-72 sm:w-72">
-                  <div
-                    className="h-full w-full bg-cover bg-center"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800&auto=format&fit=crop')",
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-accent-orange/10" />
-                </div>
-                {/* Blue circle fragment */}
-                <div className="absolute right-0 bottom-0 h-52 w-52 overflow-hidden rounded-full border-4 border-accent-blue/20 sm:h-60 sm:w-60">
-                  <div
-                    className="h-full w-full bg-cover bg-center"
-                    style={{
-                      backgroundImage:
-                        "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop')",
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-accent-blue/10" />
-                </div>
-                {/* Green accent dot */}
-                <div className="absolute top-8 right-8 h-16 w-16 rounded-full bg-accent-green/20 backdrop-blur-md" />
-                <div className="absolute bottom-12 left-12 h-8 w-8 rounded-full bg-accent-orange/30" />
+          {/* Right: Layered editorial visual */}
+          <ScrollReveal direction="right" delay={0.15}>
+            <div className="relative mx-auto w-full max-w-md">
+              {/* Offset frame behind */}
+              <div className="absolute -right-5 -top-5 h-full w-full rounded-[2rem] border border-gold/40" />
+              {/* Olive accent shape */}
+              <div className="absolute -left-6 top-10 h-20 w-20 rounded-full bg-olive/15 backdrop-blur-sm" />
+
+              {/* Main image */}
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-border shadow-2xl shadow-navy/15">
+                <div
+                  className="h-full w-full bg-cover bg-center"
+                  style={{
+                    backgroundImage:
+                      "url('https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop')",
+                  }}
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-navy-deep/45 via-transparent to-transparent" />
+              </div>
+
+              {/* Floating stat card */}
+              <div className="animate-float-soft absolute -bottom-6 -left-6 w-44 rounded-2xl border border-border bg-card p-5 shadow-xl shadow-navy/15">
+                <p className="font-serif text-4xl font-medium text-navy">
+                  1.4B<span className="text-gold">+</span>
+                </p>
+                <p className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted">
+                  Population across the continent
+                </p>
               </div>
             </div>
           </ScrollReveal>
         </div>
 
-        {/* Stats Row */}
-        <ScrollReveal delay={0.3}>
-          <div className="mt-20 grid grid-cols-2 gap-6 rounded-2xl bg-white p-8 shadow-sm lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-accent-orange/20">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="flex flex-col items-center px-6 py-4 text-center"
-              >
-                <stat.icon
-                  size={20}
-                  className="mb-3 text-accent-orange"
-                  strokeWidth={1.5}
-                />
-                <span className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
-                  {stat.value}
-                </span>
-                <span className="mt-1 text-sm text-muted">{stat.label}</span>
-              </div>
-            ))}
+        {/* Stats Band — dark, echoes the hero */}
+        <ScrollReveal delay={0.2}>
+          <div className="relative mt-24 overflow-hidden rounded-3xl bg-navy-deep px-6 py-12 lg:mt-28 lg:px-12">
+            <div className="bg-grain absolute inset-0 opacity-[0.15] mix-blend-soft-light" />
+            <div className="pointer-events-none absolute -top-24 left-1/3 h-72 w-72 rounded-full bg-olive/15 blur-[100px]" />
+            <div className="pointer-events-none absolute -bottom-24 right-1/4 h-72 w-72 rounded-full bg-gold/10 blur-[100px]" />
+
+            <div className="relative grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-10 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex flex-col lg:items-center lg:px-8 lg:text-center"
+                >
+                  <stat.icon
+                    size={18}
+                    className="mb-4 text-olive"
+                    strokeWidth={1.5}
+                  />
+                  <span className="font-serif text-[2rem] font-light text-white sm:text-5xl">
+                    {stat.value}
+                  </span>
+                  <span className="mt-2 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-white/55">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </ScrollReveal>
       </div>

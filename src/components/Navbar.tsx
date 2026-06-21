@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo-trimmed.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -40,14 +40,29 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        {/* Logo */}
-        <div className="relative  aspect-600/400 w-[200px] h-[50px]">
-          <Image fill className="object-cover" src={logo} alt="Logo" />
-        </div>
+        {/* Logo on a contrast plate so the dark mark stays legible on any bg */}
+        <a
+          href="#"
+          className={`relative rounded-lg px-2.5 py-1 transition-all duration-500 ${
+            scrolled
+              ? "bg-transparent"
+              : "bg-white shadow-sm ring-1 ring-white/30 backdrop-blur-sm"
+          }`}
+        >
+          <div className="relative aspect-[470/71] w-[168px] sm:w-[188px]">
+            <Image
+              fill
+              className="object-contain"
+              src={logo}
+              alt="BATIVILLE"
+              priority
+            />
+          </div>
+        </a>
         {/* <a href="#" className="flex items-center gap-2">
           <div
             className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-500 ${
@@ -77,7 +92,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className={`text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-accent-orange ${
+              className={`text-sm font-medium tracking-wide uppercase transition-colors duration-300 hover:text-gold ${
                 scrolled ? "text-foreground/70" : "text-white/80"
               }`}
             >
@@ -89,7 +104,7 @@ export default function Navbar() {
         {/* CTA Button */}
         <a
           href="#contact"
-          className="hidden rounded-full bg-accent-orange px-6 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-orange/90 hover:shadow-lg md:inline-block"
+          className="hidden rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-navy-deep transition-all duration-300 hover:bg-gold-soft hover:shadow-lg hover:shadow-gold/25 md:inline-block"
         >
           Partner With Us
         </a>
@@ -139,7 +154,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="font-serif text-2xl font-semibold text-foreground transition-colors hover:text-accent-orange"
+                className="font-serif text-2xl font-semibold text-foreground transition-colors hover:text-olive-deep"
               >
                 {link.label}
               </motion.a>
@@ -147,7 +162,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 rounded-full bg-accent-orange px-8 py-3 text-base font-semibold text-white"
+              className="mt-4 rounded-full bg-gold px-8 py-3 text-base font-semibold text-navy-deep"
             >
               Partner With Us
             </a>
