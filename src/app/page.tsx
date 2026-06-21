@@ -5,7 +5,7 @@ import BusinessPillars from "@/components/BusinessPillars";
 import IndustryFocus from "@/components/IndustryFocus";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-
+//bativille
 export default function Home() {
   return (
     <main>
