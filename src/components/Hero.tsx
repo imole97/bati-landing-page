@@ -13,9 +13,9 @@ import BrandMotif from "./BrandMotif";
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 
 const stats = [
-  { value: "$120M+", label: "Capital deployed" },
-  { value: "40+", label: "Portfolio companies" },
-  { value: "12", label: "Sectors backed" },
+  { value: "₦805M+", label: "Capital deployed" },
+  { value: "5+", label: "Portfolio companies" },
+  { value: "3", label: "Sectors backed" },
 ];
 
 const trustTags = ["Growth Capital", "Advisory", "Operating Support"];
@@ -205,7 +205,7 @@ export default function Hero() {
               style={{ y: cardY }}
               className="animate-float-soft absolute -left-10 top-10 w-44 rounded-2xl border border-white/10 bg-white/[0.06] p-5 shadow-xl shadow-black/30 backdrop-blur-md"
             >
-              <p className="font-serif text-4xl font-medium text-gold">
+              <p className="font-serif text-[32px] text-center text-white">
                 {stats[0].value}
               </p>
               <p className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-white/55">
@@ -243,7 +243,7 @@ export default function Hero() {
                 key={s.label}
                 className="rounded-xl border border-white/10 bg-white/[0.05] p-4 backdrop-blur-sm"
               >
-                <p className="font-serif text-2xl font-medium text-gold">
+                <p className="font-serif text-2xl font-medium  text-gold">
                   {s.value}
                 </p>
                 <p className="mt-1 font-mono text-[0.55rem] uppercase tracking-[0.12em] text-white/55">

@@ -36,10 +36,22 @@ const partnerLogos = [
 ];
 
 const advisors = [
-  { name: "Amara Okafor", initials: "AO", role: "Trade Finance" },
-  { name: "Emeka Nwosu", initials: "EN", role: "Agribusiness Strategy" },
-  { name: "Fatima Bello", initials: "FB", role: "Technology & Digital" },
-  { name: "David Mensah", initials: "DM", role: "Logistics & Operations" },
+  {
+    name: " Ethics Point Financial Services ",
+    initials: "EPFS",
+    role: "Finance",
+  },
+  {
+    name: "TWC (The Wright Capital)",
+    initials: "TWC",
+    role: "Investment Management",
+  },
+  { name: "Phillad Consulting", initials: "PC", role: "Consulting" },
+  {
+    name: "Forxus One Enterprise",
+    initials: "FOE",
+    role: "Technology & Digital",
+  },
 ];
 
 export default function IndustryFocus() {
@@ -62,8 +74,7 @@ export default function IndustryFocus() {
                 </span>
               </div>
               <h2 className="font-serif text-4xl font-light leading-[1.0] tracking-tight text-foreground sm:text-5xl lg:text-[3.7rem]">
-                Industries We{" "}
-                <span className="italic text-navy">Champion</span>
+                Industries We <span className="italic text-navy">Champion</span>
               </h2>
             </div>
             <p className="max-w-sm text-base leading-relaxed text-muted sm:text-lg">

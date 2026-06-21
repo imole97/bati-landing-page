@@ -4,9 +4,9 @@ import ScrollReveal from "./ScrollReveal";
 import { ArrowRight, TrendingUp, Globe, Users, DollarSign } from "lucide-react";
 
 const stats = [
-  { value: "$120M+", label: "Capital Deployed", icon: DollarSign },
-  { value: "45+", label: "Partner Companies", icon: Users },
-  { value: "12", label: "African Markets", icon: Globe },
+  { value: "₦805M+", label: "Capital Deployed", icon: DollarSign },
+  { value: "5+", label: "Partner Companies", icon: Users },
+  { value: "3", label: "African Markets", icon: Globe },
   { value: "3.5x", label: "Avg. Portfolio Growth", icon: TrendingUp },
 ];
 
