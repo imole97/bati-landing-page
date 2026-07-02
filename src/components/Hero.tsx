@@ -1,16 +1,26 @@
 "use client";
 
 import {
+  AnimatePresence,
   motion,
   useReducedMotion,
   useScroll,
   useTransform,
 } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import BrandMotif from "./BrandMotif";
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
+
+const headlines = [
+  { lead: "Investing in Exceptional Businesses", accent: "for the Long Term" },
+  { lead: "Africa's Builders Deserve", accent: "Better Investors." },
+  {
+    lead: "Fueling the enterprises that will define",
+    accent: "Africa's next century.",
+  },
+];
 
 const stats = [
   { value: "₦805M+", label: "Capital deployed" },
@@ -23,6 +33,16 @@ const trustTags = ["Growth Capital", "Advisory", "Operating Support"];
 export default function Hero() {
   const prefersReduced = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
+
+  // Rotating headline — one variant at a time
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((p) => (p + 1) % headlines.length),
+      4200
+    );
+    return () => clearInterval(id);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -91,33 +111,27 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            {/* Headline */}
-            <h1 className="font-serif font-light leading-[0.95] tracking-tight text-white [text-wrap:balance]">
-              <span className="block overflow-hidden">
-                <motion.span
-                  variants={lineUp}
-                  className="block text-5xl sm:text-6xl lg:text-[4.6rem]"
+            {/* Rotating headline — one variant at a time, vertical slide */}
+            <motion.div
+              variants={lineUp}
+              className="flex h-40 items-center overflow-hidden sm:h-44 lg:h-52"
+            >
+              <AnimatePresence mode="wait">
+                <motion.h1
+                  key={active}
+                  initial={{ opacity: 0, y: prefersReduced ? 0 : 60 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: prefersReduced ? 0 : -60 }}
+                  transition={{ duration: 0.65, ease: EASE }}
+                  className="max-w-2xl font-serif text-[1.9rem] font-light leading-[1.05] tracking-tight text-balance text-white sm:text-5xl lg:text-[3.5rem]"
                 >
-                  Fueling the
-                </motion.span>
-              </span>
-              <span className="block overflow-hidden">
-                <motion.span
-                  variants={lineUp}
-                  className="block text-5xl sm:text-6xl lg:text-[4.6rem]"
-                >
-                  Future of
-                </motion.span>
-              </span>
-              <span className="block overflow-hidden pt-1">
-                <motion.span
-                  variants={lineUp}
-                  className="-ml-1 block bg-linear-to-r from-olive via-gold-soft to-gold bg-clip-text pr-2 text-6xl italic text-transparent sm:text-7xl lg:text-[5.4rem]"
-                >
-                  African Enterprise
-                </motion.span>
-              </span>
-            </h1>
+                  {headlines[active].lead}{" "}
+                  <span className="bg-linear-to-r from-olive via-gold-soft to-gold bg-clip-text italic text-transparent">
+                    {headlines[active].accent}
+                  </span>
+                </motion.h1>
+              </AnimatePresence>
+            </motion.div>
 
             {/* Subheading */}
             <motion.p
