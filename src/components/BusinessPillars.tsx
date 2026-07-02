@@ -2,7 +2,7 @@
 
 import ScrollReveal from "./ScrollReveal";
 import BrandMotif from "./BrandMotif";
-import { Handshake, Cpu, TrendingUp, ArrowRight } from "lucide-react";
+import { Globe, Settings2, Hourglass, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const inputs = ["Capital", "Expertise", "Connections"];
@@ -21,10 +21,10 @@ interface Pillar {
 const pillars: Pillar[] = [
   {
     index: "01",
-    icon: Handshake,
-    title: "Export Partnership",
+    icon: Globe,
+    title: "Market Access",
     description:
-      "We bridge the gap between African producers and global markets, structuring export deals that unlock new revenue streams and build lasting international trade relationships.",
+      "A great business in the wrong market goes nowhere. We connect our portfolio companies to the international buyers, trade networks, and export channels they need to grow beyond their borders — and we structure those relationships to last.",
     iconBg: "bg-olive/12",
     accent: "text-olive-deep",
     bar: "bg-olive",
@@ -32,10 +32,10 @@ const pillars: Pillar[] = [
   },
   {
     index: "02",
-    icon: Cpu,
-    title: "Technology Advisory",
+    icon: Settings2,
+    title: "Operational Strengthening",
     description:
-      "Our technology arm helps portfolio companies adopt scalable digital infrastructure — from ERP systems and logistics tech to AI-powered analytics — to drive operational efficiency.",
+      "We help businesses run better. From the right technology systems to smarter logistics infrastructure, we work with our companies to close the operational gaps that limit growth — because a well-run business compounds faster than any financial engineering can.",
     iconBg: "bg-navy/10",
     accent: "text-navy",
     bar: "bg-navy",
@@ -43,10 +43,10 @@ const pillars: Pillar[] = [
   },
   {
     index: "03",
-    icon: TrendingUp,
-    title: "Growth Financing",
+    icon: Hourglass,
+    title: "Patient Capital",
     description:
-      "We deploy flexible capital structures tailored for African markets — including mezzanine debt, equity partnerships, and revenue-based financing — to fuel sustainable expansion.",
+      "We don't impose timelines on good businesses. Our financing is structured around what each company actually needs — whether that's equity, debt, or a revenue-aligned structure — so founders can focus on building, not on satisfying a fund's exit clock.",
     iconBg: "bg-gold/15",
     accent: "text-gold",
     bar: "bg-gold",
@@ -79,23 +79,27 @@ export default function BusinessPillars() {
                   </span>
                 </div>
                 <h2 className="font-serif text-4xl font-light leading-[1.0] tracking-tight text-foreground sm:text-5xl lg:text-[3.7rem]">
-                  Three Pillars
+                  Three Ways
                   <br />
-                  of <span className="italic text-navy">Growth</span>
+                  We Build <span className="italic text-navy">Value</span>
                 </h2>
               </div>
 
               {/* Thesis: the three inputs that compound into value */}
               <div className="lg:col-span-5">
                 <p className="max-w-md text-base leading-relaxed text-muted sm:text-lg">
-                  One integrated mandate — combining the three forces that
-                  compound value for the companies we back.
+                  We don&apos;t just provide capital and step back. We work alongside
+                  our portfolio companies in the areas that move the needle
+                  most.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
                   {inputs.map((input, i) => (
                     <div key={input} className="flex items-center gap-4">
                       {i > 0 && (
-                        <span className="h-px w-5 bg-border" aria-hidden="true" />
+                        <span
+                          className="h-px w-5 bg-border"
+                          aria-hidden="true"
+                        />
                       )}
                       <span className="flex items-center gap-2 font-mono text-[0.78rem] uppercase tracking-[0.18em] text-foreground/75">
                         <span className="h-1.5 w-1.5 rounded-full bg-olive" />

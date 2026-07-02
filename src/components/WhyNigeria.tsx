@@ -32,24 +32,26 @@ export default function WhyNigeria() {
               </span>
             </div>
             <h2 className="font-serif text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]">
-              The Continent&apos;s Most Dynamic{" "}
+              Great Businesses Can Be
               <span className="bg-linear-to-r from-olive-deep to-olive bg-clip-text italic text-transparent">
-                Investment Frontier
+                Found Anywhere
               </span>
             </h2>
             <p className="mt-7 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              Nigeria and the broader African continent represent one of the
-              last great untapped investment frontiers. With a youthful,
-              fast-growing population exceeding 1.4 billion, rapidly expanding
-              digital infrastructure, and a burgeoning middle class, the
-              opportunity to deploy capital at scale is unparalleled.
+              We believe successful investing begins with understanding a
+              business, its people, and its long-term prospects.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              At BATIVILLE Trading Co, we understand the nuances of operating in
-              this environment. Our deep local networks, regulatory expertise,
-              and sector-specific knowledge allow us to identify and nurture
-              high-potential enterprises that global investors often overlook —
-              delivering outsized returns while catalyzing real economic growth.
+              Africa continues to present opportunities for businesses that
+              operate with integrity, serve essential markets, and possess the
+              capacity to grow responsibly over time. Rather than chasing
+              trends, we focus on identifying companies with strong fundamentals
+              and supporting them through long-term partnerships.
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+              At Bativille Trading Company, our objective is simple: invest in
+              quality businesses, support capable leaders, and help create
+              lasting value for all stakeholders.
             </p>
             <a
               href="#approach"
