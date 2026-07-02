@@ -95,7 +95,7 @@ export default function ContactForm() {
             </h2>
             <p className="mt-7 max-w-md text-base leading-relaxed text-cream-muted sm:text-lg">
               Whether you&apos;re seeking growth capital, exploring export
-              partnerships, or looking for strategic advisory support — tell us
+              partnerships, or looking for strategic advisory support, tell us
               about your business and we&apos;ll find the right structure to
               accelerate your growth.
             </p>
