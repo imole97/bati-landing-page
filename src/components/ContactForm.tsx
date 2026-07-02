@@ -9,7 +9,7 @@ const details = [
   {
     icon: MapPin,
     label: "Office",
-    value: "14 Victoria Island Business District, Lagos, Nigeria",
+    value: "Block 13, Rivtaf Golf Estate, Port Harcourt",
   },
   { icon: Mail, label: "Email", value: "invest@bativille.com" },
   { icon: Phone, label: "Phone", value: "+234 (0)1 234 5678" },
@@ -107,7 +107,7 @@ export default function ContactForm() {
                     <d.icon size={16} className="text-gold" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-white/40">
+                    <p className="font-mono text-[0.62rem] uppercase tracking-[0.2em] text-white/70">
                       {d.label}
                     </p>
                     <p className="mt-1 text-sm text-white/80">{d.value}</p>

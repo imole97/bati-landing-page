@@ -93,16 +93,16 @@ export default function Footer() {
               scaling high-potential enterprises through strategic capital
               deployment, export partnerships, and technology advisory.
             </p>
-            <div className="mt-6 text-sm text-white/40">
-              <p>14 Victoria Island Business District</p>
-              <p>Lagos, Nigeria</p>
+            <div className="mt-6 text-sm text-white/70">
+              <p>Block 13, Rivtaf Golf Estate</p>
+              <p>Port Harcourt, Nigeria.</p>
               <p className="mt-2 text-gold/80">invest@bativille.com</p>
             </div>
           </div>
 
           {/* Strategies */}
           <div>
-            <h5 className="mb-5 font-mono text-[0.62rem] uppercase tracking-[0.24em] text-white/40">
+            <h5 className="mb-5 font-mono text-[0.62rem] uppercase tracking-[0.24em] text-white/70">
               Strategies
             </h5>
             <ul className="space-y-3">
@@ -121,7 +121,7 @@ export default function Footer() {
 
           {/* Firm */}
           <div>
-            <h5 className="mb-5 font-mono text-[0.62rem] uppercase tracking-[0.24em] text-white/40">
+            <h5 className="mb-5 font-mono text-[0.62rem] uppercase tracking-[0.24em] text-white/70">
               Firm
             </h5>
             <ul className="space-y-3">
