@@ -119,7 +119,7 @@ export default function IndustryFocus() {
         </div>
 
         {/* Partner Logos Marquee */}
-        <ScrollReveal delay={0.2}>
+        {/* <ScrollReveal delay={0.2}>
           <div className="mt-24 lg:mt-28">
             <p className="mb-8 text-center font-mono text-[0.66rem] uppercase tracking-[0.28em] text-muted">
               Trusted by leading African enterprises
@@ -139,7 +139,7 @@ export default function IndustryFocus() {
               </div>
             </div>
           </div>
-        </ScrollReveal>
+        </ScrollReveal> */}
 
         {/* Advisory Network */}
         <ScrollReveal delay={0.15}>
