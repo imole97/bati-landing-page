@@ -138,9 +138,9 @@ export default function Hero() {
               variants={lineUp}
               className="mt-7 max-w-xl text-base leading-relaxed text-cream-muted sm:text-lg"
             >
-              We partner with ambitious entrepreneurs and high-growth companies
-              across the continent — providing strategic capital, advisory, and
-              operational support to scale transformative businesses.
+              We Don&apos;t Bet on Africa. We Believe in It. Long-term, value-driven
+              investment across agriculture, logistics, and technology — for
+              founders who are building something that lasts.
             </motion.p>
 
             {/* CTAs */}
