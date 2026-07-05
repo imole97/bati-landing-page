@@ -139,7 +139,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     required
                     className={fieldClass}
-                    placeholder="John Doe"
+                    placeholder="Ciroma Adekunle"
                   />
                 </div>
                 <div>
@@ -157,7 +157,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     required
                     className={fieldClass}
-                    placeholder="john@company.com"
+                    placeholder="ciroma@company.com"
                   />
                 </div>
               </div>

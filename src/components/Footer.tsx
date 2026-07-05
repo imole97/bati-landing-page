@@ -143,29 +143,29 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="relative border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row lg:px-12">
-          <p className="font-mono text-[0.66rem] tracking-wide text-white/30">
+          <p className="font-mono text-[0.66rem] tracking-wide text-white/50">
             © {new Date().getFullYear()} BATIVILLE Trading Co. All rights
             reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="#"
-              className="text-xs text-white/30 transition-colors hover:text-gold"
+              className="text-xs text-white/50 transition-colors hover:text-gold"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-xs text-white/30 transition-colors hover:text-gold"
+              className="text-xs text-white/50 transition-colors hover:text-gold"
             >
               Terms of Service
             </a>
-            <a
+            {/* <a
               href="#"
               className="text-xs text-white/30 transition-colors hover:text-gold"
             >
               Cookie Policy
-            </a>
+            </a> */}
           </div>
           {/* Back to top */}
           <a
