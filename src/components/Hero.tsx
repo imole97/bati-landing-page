@@ -152,7 +152,7 @@ export default function Hero() {
                 href="#contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-lg shadow-gold/20 transition-all duration-300 hover:bg-gold-soft hover:shadow-xl hover:shadow-gold/30"
               >
-                Apply for Funding
+               Schedule a Call
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-1"

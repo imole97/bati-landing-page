@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 const industries = [
   {
     title: "Agro-Allied",
-    subtitle: "Farm to global market",
+    subtitle: "Global Commodities Trading",
     image:
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",
   },
@@ -146,7 +146,7 @@ export default function IndustryFocus() {
           <div className="mt-24 lg:mt-28">
             <div className="mb-12 flex flex-col items-center gap-4 text-center">
               <span className="font-mono text-[0.66rem] uppercase tracking-[0.28em] text-olive-deep">
-                The People Behind It
+                The Backbone Behind It
               </span>
               <h3 className="font-serif text-3xl font-light text-foreground sm:text-4xl">
                 Our Advisory Network

@@ -6,7 +6,7 @@ import { ArrowRight, TrendingUp, Globe, Users, DollarSign } from "lucide-react";
 const stats = [
   { value: "₦805M+", label: "Capital Deployed", icon: DollarSign },
   { value: "5+", label: "Partner Companies", icon: Users },
-  { value: "3", label: "African Markets", icon: Globe },
+  { value: "3", label: "Sectorial Presence", icon: Globe },
   { value: "3.5x", label: "Avg. Portfolio Growth", icon: TrendingUp },
 ];
 
@@ -32,7 +32,7 @@ export default function WhyNigeria() {
               </span>
             </div>
             <h2 className="font-serif text-4xl font-light leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]">
-              Great Businesses Can Be
+              Great Businesses Can Be{" "}
               <span className="bg-linear-to-r from-olive-deep to-olive bg-clip-text italic text-transparent">
                 Found Anywhere
               </span>

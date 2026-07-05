@@ -12,7 +12,7 @@ const details = [
     value: "Block 13, Rivtaf Golf Estate, Port Harcourt",
   },
   { icon: Mail, label: "Email", value: "invest@bativille.com" },
-  { icon: Phone, label: "Phone", value: "+234 (0)1 234 5678" },
+  { icon: Phone, label: "Phone", value: "+234 806 333 0341" },
 ];
 
 const fieldClass =
