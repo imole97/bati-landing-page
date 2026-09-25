@@ -40,7 +40,7 @@ export default function Hero() {
   useEffect(() => {
     const id = setInterval(
       () => setActive((p) => (p + 1) % headlines.length),
-      4200
+      4200,
     );
     return () => clearInterval(id);
   }, []);
@@ -52,12 +52,12 @@ export default function Hero() {
   const imageY = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, prefersReduced ? 0 : 80]
+    [0, prefersReduced ? 0 : 80],
   );
   const cardY = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, prefersReduced ? 0 : -60]
+    [0, prefersReduced ? 0 : -60],
   );
 
   const container = {
@@ -139,9 +139,9 @@ export default function Hero() {
               variants={lineUp}
               className="mt-7 max-w-xl text-base leading-relaxed text-cream-muted sm:text-lg"
             >
-              We Don&apos;t Bet on Africa. We Believe in It. Long-term, value-driven
-              investment across agriculture, logistics, and technology — for
-              founders who are building something that lasts.
+              We Don&apos;t Bet on Africa. We Believe in It. Long-term,
+              value-driven investment across agriculture, logistics, and
+              technology — for founders who are building something that lasts.
             </motion.p>
 
             {/* CTAs */}
@@ -151,7 +151,8 @@ export default function Hero() {
             >
               <button
                 type="button"
-                onClick={() => openCalendlyPopup()}
+                // onClick={() => openCalendlyPopup()}
+                onClick={() => {}}
                 onMouseEnter={() => preloadCalendlyAssets().catch(() => {})}
                 onFocus={() => preloadCalendlyAssets().catch(() => {})}
                 className="group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-lg shadow-gold/20 transition-all duration-300 hover:bg-gold-soft hover:shadow-xl hover:shadow-gold/30"
