@@ -21,7 +21,6 @@ export default function WhyNigeria() {
       <div className="pointer-events-none absolute bottom-0 -left-32 h-[26rem] w-[26rem] rounded-full bg-gold/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
-        {/* Split Section */}
         <div className="grid items-center gap-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
           {/* Left: Narrative */}
           <ScrollReveal direction="left">
