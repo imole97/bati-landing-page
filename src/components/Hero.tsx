@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { openCalendlyPopup, preloadCalendlyAssets } from "../lib/calendly";
 import BrandMotif from "./BrandMotif";
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
@@ -23,7 +24,7 @@ const headlines = [
 ];
 
 const stats = [
-  { value: "₦805M+", label: "Capital deployed" },
+  { value: "₦1.6Bn+", label: "Capital deployed" },
   { value: "5+", label: "Portfolio companies" },
   { value: "3", label: "Sectors backed" },
 ];
@@ -148,16 +149,19 @@ export default function Hero() {
               variants={lineUp}
               className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
             >
-              <a
-                href="#contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-lg shadow-gold/20 transition-all duration-300 hover:bg-gold-soft hover:shadow-xl hover:shadow-gold/30"
+              <button
+                type="button"
+                onClick={() => openCalendlyPopup()}
+                onMouseEnter={() => preloadCalendlyAssets().catch(() => {})}
+                onFocus={() => preloadCalendlyAssets().catch(() => {})}
+                className="group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-lg shadow-gold/20 transition-all duration-300 hover:bg-gold-soft hover:shadow-xl hover:shadow-gold/30"
               >
-               Schedule a Call
+                Schedule a Call
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
-              </a>
+              </button>
               <a
                 href="#about"
                 className="group inline-flex items-center justify-center gap-2 px-2 py-3.5 text-sm font-medium text-white/90 transition-colors hover:text-white"
