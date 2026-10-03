@@ -151,8 +151,7 @@ export default function Hero() {
             >
               <button
                 type="button"
-                // onClick={() => openCalendlyPopup()}
-                onClick={() => {}}
+                onClick={() => openCalendlyPopup()}
                 onMouseEnter={() => preloadCalendlyAssets().catch(() => {})}
                 onFocus={() => preloadCalendlyAssets().catch(() => {})}
                 className="group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-lg shadow-gold/20 transition-all duration-300 hover:bg-gold-soft hover:shadow-xl hover:shadow-gold/30"
